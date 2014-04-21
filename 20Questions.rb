@@ -23,11 +23,36 @@ user_answer == 'y'
 if user_answer == 'y'
 	#output if the user answer is correct or not
 	puts "Well done, correct"
+	score = score + 1
 elsif user_answer == 'n'
 	puts "try harder, wrong"
 else
 	puts "is not legible"
 end
 
-#update our score based on the response
 
+#ask question
+puts "Is it bright at night"
+
+# read in from user
+user_answer = gets.chomp
+
+#compare the user response to known good response
+user_answer == 'n'
+
+#output if user is correct or not
+if user_answer == 'n'
+	#output if the user answer is correct or not
+	puts "Well done, correct"
+	score = score + 1
+elsif user_answer == 'y'
+	puts "try harder, wrong"
+else
+	puts "is not legible"
+end
+
+
+
+
+#output our score based on the response
+puts "your score is equal to: " + score.to_s
