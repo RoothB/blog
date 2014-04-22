@@ -11,6 +11,25 @@
 # score
 
 #ask question
+my_questions = [
+	['is the sky blue', 'y']
+	['is it dark at night', 'y']
+]
+
+my_questions.each do |options|
+	puts options [0]  # options = ['is the sky blue', 'y']
+	answer = gets.chomp
+	if answer == options[1]
+end
+
+
+
+
+
+
+
+
+
 puts "Is the sky (mostly) blue"
 
 # read in from user
