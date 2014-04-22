@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'news', to: 'news#index'
+
+  get 'resume', to: 'resume#index'
+
+  get 'work', to: 'work#index'
+
   get '/', to: 'welcome#index'
 
   root 'welcome#index'
