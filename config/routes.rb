@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'gallery/index'
+
   get 'news', to: 'news#index'
 
   get 'resume', to: 'resume#index'
