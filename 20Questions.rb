@@ -9,7 +9,7 @@
 # questions
 # correct answer
 # score
-score = 1
+score = 0
 #ask question
 my_questions = [
 	['is the sky blue', 'y'],
