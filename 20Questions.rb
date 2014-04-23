@@ -9,69 +9,28 @@
 # questions
 # correct answer
 # score
-
+score = 1
 #ask question
 my_questions = [
-	['is the sky blue', 'y']
-	['is it dark at night', 'y']
+	['is the sky blue', 'y'],
+	['is it dark at night', 'y'],
+	['is a foot is 12 inches', 'y'],
+	['can I actually write code', 'n'],
+	['do pigs fly', 'n'],
+	['does the pope wear little red shoes', 'y'],
+	['do bears shit in the woods', 'y']
 ]
 
 my_questions.each do |options|
 	puts options [0]  # options = ['is the sky blue', 'y']
 	answer = gets.chomp
 	if answer == options[1]
+		puts 'Good job!'
+	else 
+		puts 'Sorry, you\'re wrong'
+
+	end
 end
-
-
-
-
-
-
-
-
-
-puts "Is the sky (mostly) blue"
-
-# read in from user
-user_answer = gets.chomp
-
-#compare the user response to known good response
-user_answer == 'y'
-
-#output if user is correct or not
-if user_answer == 'y'
-	#output if the user answer is correct or not
-	puts "Well done, correct"
-	score = score + 1
-elsif user_answer == 'n'
-	puts "try harder, wrong"
-else
-	puts "is not legible"
-end
-
-
-#ask question
-puts "Is it bright at night"
-
-# read in from user
-user_answer = gets.chomp
-
-#compare the user response to known good response
-user_answer == 'n'
-
-#output if user is correct or not
-if user_answer == 'n'
-	#output if the user answer is correct or not
-	puts "Well done, correct"
-	score = score + 1
-elsif user_answer == 'y'
-	puts "try harder, wrong"
-else
-	puts "is not legible"
-end
-
-
-
-
 #output our score based on the response
+score = score +1
 puts "your score is equal to: " + score.to_s
