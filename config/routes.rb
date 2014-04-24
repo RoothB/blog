@@ -15,7 +15,9 @@ Rails.application.routes.draw do
 
   get 'aboutme', to: 'aboutme#index'
 
-  get 'welcome', to: 'welcome#index'
+  get 'welcome', 
+    to: 'welcome#index',
+    as: 'welcome page'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
