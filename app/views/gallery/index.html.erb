@@ -6,7 +6,7 @@
 </style>
 
 <ul>
-<% ["parentaladvisory", "partridgefamily", "someband", "someotherband"].each do |value|%>
-	<%=image_tag(value + '.jpg') %>
+<% @image_names.each do |value|%>
+	<%= image_tag(value + '.jpg') %>
 <%end%>
 </ul>

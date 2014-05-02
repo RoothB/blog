@@ -1,4 +1,4 @@
-<head>
+><head>
 <style>
 body
 {background-color: rgb(0,104,255);}
@@ -8,10 +8,14 @@ text-align:center;
 color:white;
 }
   </style>
-</head>
-<body>
-<H1 Style="Font: 18px Verdana; font-weight:bold;">Site Map
- <% link to('Welcome!', welcome_page_path ) %>
- <p><a href="/aboutme/index">About Me</a><p>
-</p>
-</body>
+
+ </head>
+  <body>
+  <H1 Style="Font: 18px Verdana; font-weight:bold;">Site Map
+
+  <br>
+<%= link_to('Welcome!', welcome_page_path) %><br>
+<%= link_to('Gallery', gallery_page_path) %><br>
+
+
+  </body>
