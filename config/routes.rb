@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+  get 'admin/Private',
+    to: 'admin#Private',
+    as: 'Private_page'
+
+  get 'admin/TopSecret',
+    to: 'admin#TopSecret',
+    as: 'TopSecret_page'
+
   get 'gallery', 
     to: 'gallery#index',
     as: 'gallery_page'

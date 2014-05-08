@@ -1,0 +1,5 @@
+<% @say_hi_name = capture do %>
+	You're in like an admin.
+	<%= Time.now %>
+<% end %>
+<br> admin? <%= session['admin'] %>
