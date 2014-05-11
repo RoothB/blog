@@ -17,13 +17,16 @@
 </style>
 </head>
 <body>
+<% if user_signed_in? && current_user.admin %>
+	You're in like an Admin!
+<% end %>
+<% if user_signed_in? && !current_user.admin %>
 	<%= form_tag("/say_hi") do %>
-		<%= label_tag('my_name', 'Your Name:') %>
-		<%= text_field_tag('my_name') %>
-		<%= label_tag('my_password', 'Your Password:') %>
-		<%= text_field_tag('my_password') %>
-		<%=submit_tag("Submit") %>
+		<%= label_tag('my_password', 'Your Admin Password:') %>
+		<%= submit_tag("Submit") %>
 	<% end %>
+<% end %>
+
 <h1>How I Reimagined My Dream</h1>
 <H2 Style="Font: 14px Verdana">To advertising technology without a net.
 
