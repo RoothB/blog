@@ -5,8 +5,10 @@
 	img {width: 20%; }
 </style>
 
-<ul>
-<% @image_names.each do |value|%>
-	<%= image_tag(value + '.jpg') %>
+<% @images.each do |image_record| %>
+<li>
+	<%= image_tag( image_record.file_name) %>
+	<%= image_record.name %>
+	<%= image_record.description %>
+<li>
 <%end%>
-</ul>

@@ -17,15 +17,12 @@
 </style>
 </head>
 <body>
-<% if user_signed_in? && current_user.admin %>
-	You're in like an Admin!
-<% end %>
-<% if user_signed_in? && !current_user.admin %>
-	<%= form_tag("/say_hi") do %>
-		<%= label_tag('my_password', 'Your Admin Password:') %>
-		<%= submit_tag("Submit") %>
-	<% end %>
-<% end %>
+	<% if user_signed_in? && current_user.admin %>
+	redirect_to(say_hi_page)
+  <% end %>
+	<% else user_signed_in? && !current_user.admin %>
+	redirect_to(error_page_path)
+  <% end %>
 
 <h1>How I Reimagined My Dream</h1>
 <H2 Style="Font: 14px Verdana">To advertising technology without a net.
@@ -36,5 +33,5 @@
 	<li><b>A crap load of wine!</b></li>
 	<li><b>And, most important - Lots of luck!</b></li>
 </ul>
-	<h2>Last updated May 3, 2014</h2>
+	<h2>Last updated May 11, 2014</h2>
 </body>

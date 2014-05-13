@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :images
+
+  get 'error',
+    to: 'error#Error',
+    as: 'Error_page'
 
   devise_for :users
   get 'admin/Private',
