@@ -10,7 +10,7 @@ class WelcomeController < ApplicationController
 
   def say_hi 
      if 
-      @say_hi_name = right_say_hi_name && @say_hi_password = right_say_hi_password
+      @say_hi_name == right_say_hi_name && @say_hi_password == right_say_hi_password
   	  right_say_hi_name == 'Rooth'
       right_say_hi_password == '1967Dart'
       current_user = admin

@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  resources :projects
+
   resources :images
 
   get 'error',
-    to: 'error#Error',
-    as: 'Error_page'
+    to: 'error#error',
+    as: 'error_page'
 
   devise_for :users
   get 'admin/Private',
@@ -44,6 +46,9 @@ Rails.application.routes.draw do
 
   post 'say_hi',
     to: 'welcome#say_hi'
+  
+root to: 'welcome#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

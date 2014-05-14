@@ -18,10 +18,9 @@
 </head>
 <body>
 	<% if user_signed_in? && current_user.admin %>
-	redirect_to(say_hi_page)
-  <% end %>
-	<% else user_signed_in? && !current_user.admin %>
-	redirect_to(error_page_path)
+		signed in as admin
+	 <% elsif user_signed_in? && !current_user.admin %>
+	 	signed in but not admin
   <% end %>
 
 <h1>How I Reimagined My Dream</h1>
@@ -35,3 +34,6 @@
 </ul>
 	<h2>Last updated May 11, 2014</h2>
 </body>
+
+
+
