@@ -21,6 +21,16 @@
 
   <div><%= f.submit "Update" %></div>
 <% end %>
+<%= form_tag select_theme_path do %>
+  <%= label_tag(:color_Default, "Default") %>
+  <%= radio_button_tag(:color, "default") %>
+  <%= label_tag(:color_red, "Red") %>
+  <%= radio_button_tag(:color_red, "Red") %>
+  <%= label_tag(:color_blue, "Blue") %>
+  <%= radio_button_tag(:color_blue, "Blue") %>
+  <%= submit_tag("Update Color") %>
+<%end%>
+
 
 <h3>Cancel my account</h3>
 

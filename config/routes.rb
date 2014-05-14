@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :images
 
+
   get 'error',
     to: 'error#error',
     as: 'error_page'
@@ -11,6 +12,12 @@ Rails.application.routes.draw do
   get 'admin/Private',
     to: 'admin#Private',
     as: 'Private_page'
+
+    post 'select_theme',
+    to: 'welcome#select_theme',
+    as: 'select_theme'
+
+root 'welcome#index'
 
   get 'admin/TopSecret',
     to: 'admin#TopSecret',
@@ -46,8 +53,7 @@ Rails.application.routes.draw do
 
   post 'say_hi',
     to: 'welcome#say_hi'
-  
-root to: 'welcome#index'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -11,6 +11,6 @@ end
 
   def admin_user
     if current_user.admin != true
-      redirect_to(welcome_page_path, alert: "You're not an admin")
+      redirect_to(welcome_page_path), alert: "You're not an admin")
   end
 end

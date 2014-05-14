@@ -21,3 +21,7 @@ class WelcomeController < ApplicationController
     end
   end
 end
+
+  def select_theme
+  redirect_to(welcome_page_path), notice: "Your theme changed"
+end
