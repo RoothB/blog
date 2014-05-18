@@ -17,8 +17,6 @@ Rails.application.routes.draw do
     to: 'welcome#select_theme',
     as: 'select_theme'
 
-root 'welcome#index'
-
   get 'admin/TopSecret',
     to: 'admin#TopSecret',
     as: 'TopSecret_page'

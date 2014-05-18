@@ -19,21 +19,22 @@
 <body>
 	<% if user_signed_in? && current_user.admin %>
 		signed in as admin
-	 <% elsif user_signed_in? && !current_user.admin %>
+	 <% else user_signed_in? && !current_user.admin %>
 	 	signed in but not admin
   <% end %>
+ 
 
-<h1>How I Reimagined My Dream</h1>
-<H2 Style="Font: 14px Verdana">To advertising technology without a net.
-
-<ul>
-	<li><b>Good contacts!</b></li>
-	<li><b>Plenty of coffee!</b></li>
-	<li><b>A crap load of wine!</b></li>
-	<li><b>And, most important - Lots of luck!</b></li>
-</ul>
-	<h2>Last updated May 11, 2014</h2>
+<h1>Rooth I. Blackman</h1>
+<H2 Style="Font: 14px Verdana">The Slide into Technology
+	|
+	|
+	|
+	V
+	From the Music Business
 </body>
+
+<%= current_user.theme.color %>
+ <% end %>
 
 
 

@@ -9,19 +9,27 @@ class WelcomeController < ApplicationController
   end
 
   def say_hi 
-     if 
-      @say_hi_name == right_say_hi_name && @say_hi_password == right_say_hi_password
-  	  right_say_hi_name == 'Rooth'
-      right_say_hi_password == '1967Dart'
-      current_user = admin
-      redirect_to(say_hi_page)
-     else
-      current_user != admin
-      redirect_to(error_page_path)
-    end
+    @say_hi_password == params['my_password']
+    right_say_hi_password == '1967Dart'
+    
+    if true
+      @say_hi_password == right_password
+      current_user.admin = true
+      current_user.save
+    else
+      redirect_to(welcome_page_path)
   end
-end
 
   def select_theme
-  redirect_to(welcome_page_path), notice: "Your theme changed"
+    color_choice = params['color']
+    if current_user.theme
+       current_user.theme = Theme.new
+  end
+
+    current_user.theme.color = color_choice
+    current_user.theme.save
+  end
+
+    redirect_to(welcome_page_path, notice: "Your theme changed")
+  end
 end
