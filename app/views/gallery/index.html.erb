@@ -2,12 +2,12 @@
 
 
 <style>
-	img {width: 20%; }
+	img {width: 50%; }
 </style>
 
 <% @images.each do |image_record| %>
 <li>
-	<%= image_tag( image_record.file_name) %>
+	<%= image_tag( image_record.image.url) %>
 	<%= image_record.name %>
 	<%= image_record.description %>
 <li>

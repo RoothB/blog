@@ -7,10 +7,10 @@ class AdminController < ApplicationController
 
   def TopSecret
   end
-end
 
   def admin_user
-    if current_user.admin != true
-      redirect_to(welcome_page_path), alert: "You're not an admin")
+    if current_user.admin = true
+      redirect_to(welcome_page_path, notice: "You're in like admin")
+    elsif current_user.admin != true
+      redirect_to(welcome_page_path, alert: "You're not an admin")
   end
-end

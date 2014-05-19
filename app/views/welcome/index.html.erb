@@ -11,30 +11,24 @@
 	{text-align:center;
 	color:black
 	}
-	ul {
-	  list-style-type: none
-	}
 </style>
 </head>
 <body>
 	<% if user_signed_in? && current_user.admin %>
 		signed in as admin
-	 <% else user_signed_in? && !current_user.admin %>
+	<% end %>
+	 <% if user_signed_in? && !current_user.admin %>
 	 	signed in but not admin
-  <% end %>
- 
+	<% end %>
+	<% if current_user && current_user.theme %>
+		YOUR THEME: <%= current_user.theme.color %>
+	<% end %>
 
-<h1>Rooth I. Blackman</h1>
-<H2 Style="Font: 14px Verdana">The Slide into Technology
-	|
-	|
-	|
-	V
-	From the Music Business
+	<h1>Rooth I. Blackman</h1>
+	<h2>Sliding into Technology
+	<br>	|
+	<br>	|
+	<br>	|
+	<br>	V
+	<br>From the Music Business</h2>
 </body>
-
-<%= current_user.theme.color %>
- <% end %>
-
-
-
