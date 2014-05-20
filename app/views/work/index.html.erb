@@ -1,11 +1,28 @@
+<head>
 <style>
+	body
+	{background-color: rgb(0,104,255);}
+	h1,h2,p
+	{
+	text-align:center;
+	color:white;
+	}
+	ul
+	{text-align:center;
+	color:black
+	}
+
 	img {width: 20%; }
 </style>
+</head>
+<body>
 
+<H1 Style="Font: 18px Verdana; font-weight:bold;">My ongoing site, publisher and network certifications
 <% @projects.each do |project_record| %>
-<li>
-	<%= project_tag( project_record.file_name) %>
+<br>
+
+	<%= image_tag( project_record.image.url) %>
 	<%= project_record.name %>
 	<%= project_record.description %>
-<li>
+<br>
 <%end%>

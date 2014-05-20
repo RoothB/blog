@@ -1,14 +1,32 @@
-<hr/>
+<head>
+<style>
+	body
+	{background-color: rgb(0,104,0);}
+	h1,h2,p
+	{
+	text-align:center;
+	color:white;
+	}
+	ul
+	{text-align:center;
+	color:black
+	}
 
+	img {width: 20%; }
+</style>
+</head>
+<body>
+
+<H1 Style="Font: 18px Verdana; font-weight:bold;">Promotional items I created in collaboration with bands, management and label.
 
 <style>
 	img {width: 50%; }
 </style>
 
 <% @images.each do |image_record| %>
-<li>
+<br>
 	<%= image_tag( image_record.image.url) %>
 	<%= image_record.name %>
 	<%= image_record.description %>
-<li>
+<br>
 <%end%>
